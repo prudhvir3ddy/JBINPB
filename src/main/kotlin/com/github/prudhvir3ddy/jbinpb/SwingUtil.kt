@@ -1,0 +1,17 @@
+package com.github.prudhvir3ddy.jbinpb
+
+import com.intellij.openapi.util.ScalableIcon
+import java.awt.Insets
+
+internal val Insets.horizontal
+    get() = left + right
+
+internal val Insets.vertical
+    get() = top + bottom
+
+internal fun ScalableIcon.resize(sizePx: Int) =
+    if (sizePx != iconWidth) {
+        scale((sizePx.coerceAtLeast(1) / iconWidth.toFloat()))
+    } else {
+        this
+    }
