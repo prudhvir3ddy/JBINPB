@@ -4,6 +4,10 @@
     <name>Indian Progress Bar</name>
     <vendor>prudhvir3ddy</vendor>
 
+    <description>
+    Indian Progress Bar is a fun IntelliJ IDEA plugin that replaces the standard progress bar with a vibrant, animated Indian flag-themed progress bar. It adds a touch of cultural flair to your development environment, making waiting times more enjoyable and visually appealing. Perfect for developers who want to showcase their Indian pride while coding!
+    </description>
+
     <depends>com.intellij.modules.platform</depends>
 
     <resource-bundle>messages.IndianBundle</resource-bundle>
