@@ -1,8 +1,8 @@
 # JBINPB
 
 ![Build](https://github.com/prudhvir3ddy/JBINPB/workflows/Build/badge.svg)
-[![Version](https://img.shields.io/jetbrains/plugin/v/MARKETPLACE_ID.svg)](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID)
-[![Downloads](https://img.shields.io/jetbrains/plugin/d/MARKETPLACE_ID.svg)](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID)
+[![Version](https://img.shields.io/jetbrains/plugin/v/MARKETPLACE_ID.svg)](https://plugins.jetbrains.com/plugin/28345-indian-progress-bar/edit)
+[![Downloads](https://img.shields.io/jetbrains/plugin/d/MARKETPLACE_ID.svg)](https://plugins.jetbrains.com/plugin/28345-indian-progress-bar/)
 
 
 <iframe width="245px" height="48px" src="https://plugins.jetbrains.com/embeddable/install/28345"></iframe>
