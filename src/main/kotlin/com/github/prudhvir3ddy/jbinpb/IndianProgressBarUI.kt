@@ -5,12 +5,7 @@ import com.intellij.ui.NewUI
 import com.intellij.ui.scale.JBUIScale.scale
 import com.intellij.util.ui.GraphicsUtil
 import com.intellij.util.ui.JBInsets
-import java.awt.AlphaComposite
-import java.awt.BasicStroke
-import java.awt.Dimension
-import java.awt.Graphics
-import java.awt.Graphics2D
-import java.awt.RenderingHints
+import java.awt.*
 import java.awt.event.ComponentAdapter
 import java.awt.event.ComponentEvent
 import java.awt.geom.Path2D
@@ -245,7 +240,7 @@ internal class IndianProgressBarUI : BasicProgressBarUI() {
         )
 
         // Draw Ashoka Chakra in the center
-        drawAshokaChakraIfSpaceAvailable(x, y, barWidth, barHeight)
+        drawAshokaChakra(x, y, barWidth, barHeight)
     }
 
     /**
@@ -270,7 +265,7 @@ internal class IndianProgressBarUI : BasicProgressBarUI() {
 
         // Draw center hub
         val centerRadius = (radius / 4f).coerceAtLeast(MIN_CENTER_RADIUS)
-        drawCircle(centerX, centerY, centerRadius, filled = true)
+        drawCircle(centerX, centerY, centerRadius, filled = false)
     }
 
     private fun Graphics2D.drawBorder(
@@ -345,11 +340,9 @@ internal class IndianProgressBarUI : BasicProgressBarUI() {
     private fun shouldShowRamaIcon(availableHeight: Float, barWidth: Float): Boolean =
         availableHeight >= MIN_ICON_DISPLAY_HEIGHT && barWidth >= MIN_ICON_DISPLAY_WIDTH
 
-    private fun Graphics2D.drawAshokaChakraIfSpaceAvailable(x: Float, y: Float, barWidth: Float, barHeight: Float) {
-        if (barWidth > CHAKRA_MIN_WIDTH && barHeight > CHAKRA_MIN_HEIGHT) {
+    private fun Graphics2D.drawAshokaChakra(x: Float, y: Float, barWidth: Float, barHeight: Float) {
             val chakraRadius = (barHeight / 6f).coerceIn(2f, 16f)
             drawAshokaChakra(x + barWidth / 2f, y + barHeight / 2f, chakraRadius)
-        }
     }
 
     private fun Graphics2D.drawFlagStripe(
